@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+div{
+    height: 33.33vh;   
+}
+#fahrenheit{
+    border-top:4px solid white ;
+    border-bottom:4px solid white ;
+}
+
+input[type=number]{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background: black;
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    border: 0;
+    font-family: 'Azeret Mono', monospace;
+}
+
+::-webkit-input-placeholder{ /*chrome*/
+    color: #222;
+}
+
+::-moz-placeholder{ /*firefox*/
+    color: #222;
+}
+
+::-ms-input-placeholder{/*edge*/
+    color: #222;
+}
