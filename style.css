@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+
+
 }
 
 body{
@@ -10,16 +14,16 @@ body{
 }
 header{
     background-color: antiquewhite;
-    height: 20vh;
+    height: 10vh;
     text-align: center;
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: 'Azeret Mono', monospace;
     padding-top: 1%;
     
 }
 
 div{
-    height: 33.33vh;   
+    height: 20vh;   
 }
 #fahrenheit{
     border-top:4px solid white ;
@@ -48,4 +52,30 @@ input[type=number]{
 
 ::-ms-input-placeholder{/*edge*/
     color: #222;
+}
+
+
+footer{
+    background-color: black;
+    color: white;
+} 
+
+.ft-social-list{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.ft-social-list li{
+    padding: 2rem;
+}
+
+.fab{
+    color: white;
+}
+
+.ft-main{
+    text-align: center;
+    font-size: 1.5rem;
 }
