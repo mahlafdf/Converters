@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <script src="https://kit.fontawesome.com/45d6c1db0a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+            body{
+        margin-top: 70px;
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+        }
+
+        footer{
+            margin-top: 38vh;
+            background-color: black;
+            color: white;
+        } 
+
+        .ft-social-list{
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+        .ft-social-list li{
+            padding: 2rem;
+        }
+
+        .fab{
+            color: white;
+        }
+
+        .ft-main li{
+            text-align: center;
+            font-size: 1.5rem;
+            list-style: none;
+        }
+
+        h1:hover{
+            background-color: rgb(255, 255, 255);
+            border-radius: 28px;
+            color: black;
+        
+            
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="row">
+           <div class="col-md-6 offset-md-3">
+                <h1 class="display-4 text-center mb-5">Weight Converter</h1>
+                <form>
+                    <div class="form-group">
+                        <input 
+                        id="lbsInput"
+                        type="number" 
+                        class=" form-control form-control-lg mb-2" 
+                        placeholder="Enter Pounds ...">
+                    </div>    
+                </form>
+                <div id="output">
+                    <div class="card mb-2 bg-dark">
+                        <div class="card-block">
+                            <h4>Grams:</h4>
+                            <div id="gramsOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-2 bg-dark">
+                        <div class="card-block">
+                            <h4>Kilograms:</h4>
+                            <div id="kgOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-2 bg-dark">
+                        <div class="card-block">
+                            <h4>Ounces:</h4>
+                            <div id="ozOutput"></div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </div>
+   </div>
+    <footer> 
+        <!--footer social-->
+        <section class="ft-social">
+            <ul class="ft-social-list">
+                <li><a  href="https://github.com/mahlafdf"><i class="fab fa-github fa-3x"></i></a></li>
+                <li><a  href="https://www.linkedin.com/in/mahla-fadaei-765569176/"><i class="fab fa-linkedin fa-3x"></i></a></li>
+                <li><a  href="https://codepen.io/Mahlafdf"><i class="fab fa-codepen fa-3x"></i></a></li>
+            </ul>
+        </section> 
+        <!--
+            main footer
+        -->
+        <section class="ft-main">
+            <ul>
+                <li><small>&copy;Created by MahlaFdf</small></li>
+                <li><small>To Check Other Projects Check My Profiles</small></li>
+            </ul>
+        </section>
+    </footer> 
+<script>
+    
+    document.getElementById('output').style.visibility ='hidden';
+    document.getElementById('lbsInput').addEventListener('input', function(e){
+    document.getElementById('output').style.visibility ='visible';
+    let lbs = e.target.value;
+    document.getElementById('gramsOutput').innerHTML = lbs/0.0022046;
+    document.getElementById('kgOutput').innerHTML = lbs/2.2046;
+    document.getElementById('ozOutput').innerHTML = lbs*16;
+    });
+
+</script>
+</body>
+</html>
